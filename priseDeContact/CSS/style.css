@@ -227,6 +227,7 @@ h1 {
     margin: auto;
     max-height:80vh;
     overflow: hidden;
+    border-radius: 20px;
 
 }
 
@@ -327,78 +328,6 @@ h1 {
 
 
 
-/*
-
-#inputMme, #inputMr {
-    display: inline-block;
-    position: relative;
-    width:6vw;
-    margin-left: 0.5vw;
-
-
-
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-#inputMme input, #inputMr input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-
-}
-
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  margin-left:0.5vw;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-
-
-#inputMme:hover input ~ .checkmark, #inputMr:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-
-#inputMme input:checked ~ .checkmark, #inputMr input:checked ~ .checkmark  {
-  background-color: #2196F3;
-}
-
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-
-#inputMme input:checked ~ .checkmark:after, #inputMr input:checked ~ .checkmark:after {
-  display: block;
-}
-
-#inputMme .checkmark:after, #inputMr .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
-
-*/
-
 
 
 
@@ -419,7 +348,15 @@ h1 {
   user-select: none;
   margin-left:0.5vw;
   margin-right: 1vw;
+    color:#66afe1;
 }
+
+#inputMme:hover{
+
+    color:#0062c5;
+    font-weight: bold
+}
+
 
 /* Hide the browser's default radio button */
 #inputMme input {
@@ -494,7 +431,15 @@ h1 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+    color:#66afe1;
 }
+
+#inputMr:hover{
+
+    color:#0062c5;
+    font-weight: bold
+}
+
 
 /* Hide the browser's default radio button */
 #inputMr input {
@@ -524,6 +469,7 @@ h1 {
 /* When the radio button is checked, add a blue background */
 #inputMr input:checked ~ .checkmark2 {
   background-color: #0062c5;
+
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -571,7 +517,16 @@ h1 {
   -ms-user-select: none;
   user-select: none;
     margin-left:0.5vw;
+      color:#66afe1;
 }
+
+
+#inputPro:hover{
+
+    color:#0062c5;
+    font-weight: bold
+}
+
 
 /* Hide the browser's default checkbox */
 #inputPro input {
@@ -600,6 +555,7 @@ h1 {
 /* When the checkbox is checked, add a blue background */
 #inputPro input:checked ~ .checkmark3 {
   background-color: #0062c5;
+
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -612,6 +568,7 @@ h1 {
 /* Show the checkmark when checked */
 #inputPro input:checked ~ .checkmark3:after {
   display: block;
+
 }
 
 /* Style the checkmark/indicator */
@@ -625,6 +582,7 @@ h1 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
 }
 
 
@@ -642,7 +600,7 @@ h1 {
     width: 30vw;
     padding:10px;
     margin:10px;
-    margin-top:3vh;
+    margin-top:1.5vh;
     border: 2px solid #66afe1;
 }
 
