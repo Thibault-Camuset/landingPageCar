@@ -1,0 +1,710 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 11px;
+    line-height: 1.5em;
+    text-align: justify;
+    color: #aaa;
+    background-color: #f5f5f5;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+#carousel, #navigation {
+    flex: initial;
+    display: block;
+}
+
+#carousel {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+}
+
+
+
+.p-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 0.4s ease-in-out;
+}
+
+#button1a:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
+}
+
+#button2:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); 
+}
+
+#button3:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%); 
+}
+
+#button4:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%); 
+}
+#button5:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%); 
+} 
+
+[class^="panel"] {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+
+}
+
+[class^="insidePannel"] {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    top: 10vh;
+    bottom: 10vh;
+    margin: auto;
+    max-height:80vh;
+
+}
+
+#navigation {
+    margin-left: 24px;
+    position: fixed;
+    left:5vh;
+}
+
+[class^="label"] {
+    display: block;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 10px;
+    height: 45px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    color: #aaa;
+    background-color: #66afe1;
+    transition: all 0.3s ease;
+}
+
+[class^="label"]:hover {
+    color: #444;
+    background-color: #0062c5;
+}
+
+#button1:checked ~ #navigation .label1,
+#button2:checked ~ #navigation .label2,
+#button3:checked ~ #navigation .label3,
+#button4:checked ~ #navigation .label4,
+#button5:checked ~ #navigation .label5 {
+   cursor: default;
+   color: #fff;
+   background-color: #222;
+}
+
+
+
+#wrapperEssai{
+
+    position:absolute;
+    top:6vh;
+    right:5vw;
+    transform: translate(-50%, -50%);
+
+}
+
+#essai {
+
+    display:block;
+    width:19vw;
+    height:5vh;
+    line-height: 5vh;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: #66afe1;
+    color:white;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    font-weight:bold;
+}
+
+#essai span{
+    position: relative;
+    z-index: 2;
+}
+
+#essai:after{
+
+    position: absolute;
+    content: "";
+    top: 0;
+    left:0;
+    width:0;
+    height:100%;
+    background: #0062c5;
+    transition: all .35s;
+
+
+}
+
+
+
+#essai:hover{
+
+    color:#fff;
+    box-shadow: -10px 10px gray;
+}
+
+#essai:hover:after{
+
+    width:100%;
+
+}
+
+#logo {
+
+    position: fixed;
+    top:2vh;
+    left:49vw;
+    z-index: 3;  
+
+}
+
+#logo img {
+    max-width: 10vh;
+    height:auto;
+}
+
+h1 {
+
+    position: fixed;
+    text-align: center;
+
+    left: 45%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contactImg {
+
+    position: relative;
+    width: 45vw;
+    height: 80vh;
+    top: 10vh;
+    bottom: 10vh;
+    margin: auto;
+    max-height:80vh;
+    overflow: hidden;
+
+}
+
+
+#contactImg:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%);
+}
+
+
+#contactImg:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+
+#contactImg:active:after {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contactForm {
+
+    position: relative;
+    width: 40vw;
+    height: 80vh;
+    top: 10vh;
+    bottom: 10vh;
+    margin: auto;
+    max-height:80vh;
+
+}
+
+#contactForm h2 {
+
+    color:  #66afe1;
+    font-size: 34px;
+    font-weight: bold;
+
+
+}
+
+#contactForm h2:hover {
+    font-size: 36px;
+    text-shadow: 1px 1px gray;
+    color:  #0062c5;
+
+
+}
+
+
+#contactForm p {
+
+    color:  #66afe1;
+    font-size: 15px;
+    font-weight: bold;
+
+
+}
+
+#contactForm p:hover {
+
+    color:  #0062c5;
+    font-size: 16px;
+    text-shadow: 0.5px 0.5px gray;
+
+}
+
+
+
+
+
+/*
+
+#inputMme, #inputMr {
+    display: inline-block;
+    position: relative;
+    width:6vw;
+    margin-left: 0.5vw;
+
+
+
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+#inputMme input, #inputMr input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  margin-left:0.5vw;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+
+#inputMme:hover input ~ .checkmark, #inputMr:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+#inputMme input:checked ~ .checkmark, #inputMr input:checked ~ .checkmark  {
+  background-color: #2196F3;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+#inputMme input:checked ~ .checkmark:after, #inputMr input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#inputMme .checkmark:after, #inputMr .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+*/
+
+
+
+
+
+
+
+/* Customize the label (the container) */
+#inputMme {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left:0.5vw;
+  margin-right: 1vw;
+}
+
+/* Hide the browser's default radio button */
+#inputMme input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+#inputMme:hover input ~ .checkmark1 {
+  background-color: #66afe1;
+}
+
+/* When the radio button is checked, add a blue background */
+#inputMme input:checked ~ .checkmark1 {
+  background-color: #0062c5;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#inputMme input:checked ~ .checkmark1:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#inputMme .checkmark1:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* Customize the label (the container) */
+#inputMr {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+#inputMr input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+#inputMr:hover input ~ .checkmark2 {
+  background-color: #66afe1;
+}
+
+/* When the radio button is checked, add a blue background */
+#inputMr input:checked ~ .checkmark2 {
+  background-color: #0062c5;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#inputMr input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#inputMr .checkmark2:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Customize the label (the container) */
+#inputPro {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    margin-left:0.5vw;
+}
+
+/* Hide the browser's default checkbox */
+#inputPro input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+#inputPro:hover input ~ .checkmark3 {
+  background-color: #66afe1;
+}
+
+/* When the checkbox is checked, add a blue background */
+#inputPro input:checked ~ .checkmark3 {
+  background-color: #0062c5;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#inputPro input:checked ~ .checkmark3:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#inputPro .checkmark3:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+#inputNom, #inputPrenom, #inputEmail, #inputTelephone {
+
+    width: 30vw;
+    padding:10px;
+    margin:10px;
+    margin-top:3vh;
+    border: 2px solid #66afe1;
+}
+
+#inputNom:hover, #inputPrenom:hover, #inputEmail:hover, #inputTelephone:hover {
+
+    border: 3px solid #0062c5;
+
+}
+
+
+
+#inputNom:focus, #inputPrenom:focus, #inputEmail:focus, #inputTelephone:focus {
+
+    border: 4px solid #0062c5;
+    outline: none;
+    box-shadow: -10px 10px gray;
+
+
+}
+
+#inputNom:focus::placeholder, #inputPrenom:focus::placeholder, #inputEmail:focus::placeholder, #inputTelephone:focus::placeholder {
+    color:transparent;
+}
+
+
+#etapeSuivante {
+
+    background-color: #66afe1;
+    color:white;
+    padding: 10px;
+    width: 30vw;
+    margin:10px;
+    margin-top:3vh;
+}
+
+#etapeSuivante:hover {
+
+    background-color: #0062c5;
+    font-weight: bold;
+    box-shadow: -10px 10px gray;
+
+}
+
+
+
+
+
+
+@media (min-width: 651px) and (max-width: 1024px) {
+
+
+
+}
+
+
+
+@media (max-width: 650px) {
+
+
+    #contactImg {
+
+        visibility: hidden;
+    }
+
+}
