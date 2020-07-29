@@ -32,70 +32,98 @@
 
 
 		<div id="contactForm">
-			
+
+
+
+
+
 			<h2>Vos informations personnelles</h2>
 			<p>Tous les champs sont obligatoires</p>
 
-			<form id="contactInputs">
-
-				<br/>
 
 
 
-				<div id="contact1">
-
-				<label id="inputMme">Mme
-					<input type="radio" name="gender">
-					<span class="checkmark1"></span>
-				</label>
-
-				<label id="inputMr">M.
-					<input type="radio" name="gender">
-					<span class="checkmark2"></span>
-				</label>
+			<form id="regForm" action="">
 
 
-				<br/>
-				<br/>
 
-				<label id="inputPro">Je suis un(e) professionnel(le)
-					<input type="checkbox">
-					<span class="checkmark3"></span>
-				</label>
+				
+				<div class="tab">
+					<label id="inputMme">Mme
+						<input type="radio" name="gender" required="required">
+						<span class="checkmark1"></span>
+					</label>
 
-
-				<!--<input type="checkbox" id="inputPro">
-				<label for="inputPro">Je suis un(e) profesionnel(le)</label>-->
-
-				<br/>
-
-
-				<input type="text" placeholder="Nom" id="inputNom" required="">
-				<br/>
-				<input type="text" placeholder="Prénom" id="inputPrenom" required="">
-				<br/>
-				<input type="text" placeholder="E-mail" id="inputEmail" required="">
-				<br/>
-				<input type="text" placeholder="Téléphone" id="inputTelephone" required="">
-				<br/>
+					<label id="inputMr">M.
+						<input type="radio" name="gender">
+						<span class="checkmark2"></span>
+					</label>
 
 
-			</form>
+					<br/>
+					<br/>
 
-			<a class="btn" id="etapeSuivante" href="">PASSER À L'ÉTAPE SUIVANTE</a>	
+					<label id="inputPro">Je suis un(e) professionnel(le)
+						<input type="checkbox">
+						<span class="checkmark3"></span>
+					</label>
+
+
+
+					<br/>
+
+
+					<input type="text" placeholder="Nom" id="inputNom" required="">
+					<br/>
+					<input type="text" placeholder="Prénom" id="inputPrenom" required="">
+					<br/>
+					<input type="text" placeholder="E-mail" id="inputEmail" required="">
+					<br/>
+					<input type="text" placeholder="Téléphone" id="inputTelephone" required="">
+					<br/>
+				</div>
+
+
+
+				<div class="tab">
+
+				</div>
+
+				<div class="tab">
+					<p><input placeholder="dd" oninput="this.className = ''"></p>
+					<p><input placeholder="mm" oninput="this.className = ''"></p>
+					<p><input placeholder="yyyy" oninput="this.className = ''"></p>
+				</div>
+
+				<div class="tab">
+					<p><input placeholder="Username..." oninput="this.className = ''"></p>
+					<p><input placeholder="Password..." oninput="this.className = ''"></p>
+				</div>
+
+				<div>
+					<div>
+						<button type="button" id="etapePrecedente" onclick="nextPrev(-1)">Etape Précedente</button>
+						<button type="button" id="etapeSuivante" onclick="nextPrev(1)">Etape Suivante</button>
+					</div>
+				</div>
+
+				<!-- Circles which indicates the steps of the form: -->
+				<div id="contactSteps">
+					<span class="step"></span>
+					<span class="step"></span>
+					<span class="step"></span>
+					<span class="step"></span>
+				</div>
+
+			</form> 
+
 
 		</div>
 
-		</div>
 
 
 
 	</div>
-
-
-
-
-</div>
 
 <a id="logo" href="index.html">
 	<img src="IMG/logoPeugeot.png" alt="Logo de Peugot">
@@ -107,6 +135,7 @@
 
 
 
+<script type="text/javascript" src="JS/script.js"></script>
 
 
 

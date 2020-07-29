@@ -289,6 +289,61 @@ h1 {
 
 }
 
+
+
+
+
+
+
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #66afe1;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 1;
+}
+
+/* Mark the active step: */
+.step.active {
+  background-color: black;
+
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #0062c5;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #contactForm h2 {
 
     color:  #66afe1;
@@ -312,6 +367,7 @@ h1 {
     color:  #66afe1;
     font-size: 15px;
     font-weight: bold;
+    margin-bottom:4vh;
 
 
 }
@@ -334,12 +390,11 @@ h1 {
 
 
 
-/* Customize the label (the container) */
 #inputMme {
   display: inline-block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 1vh;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -358,7 +413,6 @@ h1 {
 }
 
 
-/* Hide the browser's default radio button */
 #inputMme input {
   position: absolute;
   opacity: 0;
@@ -367,7 +421,6 @@ h1 {
   width: 0;
 }
 
-/* Create a custom radio button */
 .checkmark1 {
   position: absolute;
   top: 0;
@@ -378,29 +431,24 @@ h1 {
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
 #inputMme:hover input ~ .checkmark1 {
   background-color: #66afe1;
 }
 
-/* When the radio button is checked, add a blue background */
 #inputMme input:checked ~ .checkmark1 {
   background-color: #0062c5;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark1:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 #inputMme input:checked ~ .checkmark1:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 #inputMme .checkmark1:after {
   top: 9px;
   left: 9px;
@@ -419,12 +467,11 @@ h1 {
 
 
 
-/* Customize the label (the container) */
 #inputMr {
   display: inline-block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 1vh;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -441,7 +488,6 @@ h1 {
 }
 
 
-/* Hide the browser's default radio button */
 #inputMr input {
   position: absolute;
   opacity: 0;
@@ -450,7 +496,6 @@ h1 {
   width: 0;
 }
 
-/* Create a custom radio button */
 .checkmark2 {
   position: absolute;
   top: 0;
@@ -461,30 +506,25 @@ h1 {
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
 #inputMr:hover input ~ .checkmark2 {
   background-color: #66afe1;
 }
 
-/* When the radio button is checked, add a blue background */
 #inputMr input:checked ~ .checkmark2 {
   background-color: #0062c5;
 
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark2:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 #inputMr input:checked ~ .checkmark2:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 #inputMr .checkmark2:after {
   top: 9px;
   left: 9px;
@@ -504,12 +544,11 @@ h1 {
 
 
 
-/* Customize the label (the container) */
 #inputPro {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 1vh;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -528,7 +567,6 @@ h1 {
 }
 
 
-/* Hide the browser's default checkbox */
 #inputPro input {
   position: absolute;
   opacity: 0;
@@ -537,7 +575,6 @@ h1 {
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark3 {
   position: absolute;
   top: 0;
@@ -547,31 +584,26 @@ h1 {
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
 #inputPro:hover input ~ .checkmark3 {
   background-color: #66afe1;
 }
 
-/* When the checkbox is checked, add a blue background */
 #inputPro input:checked ~ .checkmark3 {
   background-color: #0062c5;
 
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark3:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 #inputPro input:checked ~ .checkmark3:after {
   display: block;
 
 }
 
-/* Style the checkmark/indicator */
 #inputPro .checkmark3:after {
   left: 9px;
   top: 5px;
@@ -626,23 +658,31 @@ h1 {
 }
 
 
-#etapeSuivante {
+#etapeSuivante, #etapePrecedente {
 
     background-color: #66afe1;
     color:white;
     padding: 10px;
-    width: 30vw;
+    width: 14.3vw;
     margin:10px;
     margin-top:3vh;
+    font-weight:bold;
 }
 
-#etapeSuivante:hover {
+#etapeSuivante:hover, #etapePrecedente:hover {
 
     background-color: #0062c5;
     font-weight: bold;
     box-shadow: -10px 10px gray;
 
 }
+
+#contactSteps {
+
+  margin-top:2vh;
+  margin-left:13vw;
+}
+
 
 
 
