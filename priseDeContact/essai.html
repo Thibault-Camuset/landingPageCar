@@ -36,56 +36,75 @@
 
 
 
+			<div id="infoPerso">
+				<h2>Vos informations personnelles</h2>
+				<p>Tous les champs sont obligatoires</p>
+			</div>
 
-			<h2>Vos informations personnelles</h2>
-			<p>Tous les champs sont obligatoires</p>
 
 
-
-
-			<form id="regForm" action="">
+			<form id="regForm" action="essai.html#finish" method="POST">
 
 
 
 				
 				<div class="tab">
+					<label id="inputMr">M.
+						<input type="radio" name="gender" checked>
+						<span class="checkmark2"></span>
+					</label>
+
 					<label id="inputMme">Mme
-						<input type="radio" name="gender" required="required">
+						<input type="radio" name="gender">
 						<span class="checkmark1"></span>
 					</label>
 
-					<label id="inputMr">M.
-						<input type="radio" name="gender">
-						<span class="checkmark2"></span>
-					</label>
+					
 
 
 					<br/>
 					<br/>
 
 					<label id="inputPro">Je suis un(e) professionnel(le)
-						<input type="checkbox">
+						<input type="checkbox" name="inputPro">
 						<span class="checkmark3"></span>
 					</label>
 
 
 
-					<br/>
+					
 
 
-					<input type="text" placeholder="Nom" id="inputNom" required="">
-					<br/>
-					<input type="text" placeholder="Prénom" id="inputPrenom" required="">
-					<br/>
-					<input type="text" placeholder="E-mail" id="inputEmail" required="">
-					<br/>
-					<input type="text" placeholder="Téléphone" id="inputTelephone" required="">
-					<br/>
+					<input type="text" placeholder="Nom" name="inputNom" id="inputNom" required="">
+					
+					<input type="text" placeholder="Prénom" name="inputPrenom" id="inputPrenom" required="">
+					
+					<input type="email" placeholder="E-mail" name="inputEmail" id="inputEmail" required="">
+					
+					<input type="text" placeholder="Téléphone" name="inputTelephone" id="inputTelephone" required="">
+					
 				</div>
 
 
 
 				<div class="tab">
+
+					<input type="text" placeholder="Adresse" id="inputAdresse" name="inputAdresse" required="">
+					
+					<input type="text" placeholder="Code Postal" id="inputCodePostal" name="inputCodePostal" required="">
+					
+					<input type="text" placeholder="Ville" id="inputVille" name="inputVille" required="">
+
+					<select id="inputPays" name="inputPays">
+						<option value="fr">France</option>
+						<option value="be">Belgique</option>
+						<option value="lx">Luxenbourg</option>
+						<option value="de">Allemagne</option>
+						<option value="it">Italie</option>
+					</select>
+					
+
+
 
 				</div>
 
@@ -100,6 +119,7 @@
 					<p><input placeholder="Password..." oninput="this.className = ''"></p>
 				</div>
 
+
 				<div>
 					<div>
 						<button type="button" id="etapePrecedente" onclick="nextPrev(-1)">Etape Précedente</button>
@@ -107,7 +127,7 @@
 					</div>
 				</div>
 
-				<!-- Circles which indicates the steps of the form: -->
+				
 				<div id="contactSteps">
 					<span class="step"></span>
 					<span class="step"></span>
@@ -117,6 +137,11 @@
 
 			</form> 
 
+			<div id="finish">
+				<h1>Votre demande est bien enregistrée!</h1>
+			</div>
+
+
 
 		</div>
 
@@ -125,9 +150,9 @@
 
 	</div>
 
-<a id="logo" href="index.html">
-	<img src="IMG/logoPeugeot.png" alt="Logo de Peugot">
-</a>
+	<a id="logo" href="index.html">
+		<img src="IMG/logoPeugeot.png" alt="Logo de Peugot">
+	</a>
 
 
 </div>

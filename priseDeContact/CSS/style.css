@@ -197,14 +197,6 @@ body {
     height:auto;
 }
 
-h1 {
-
-    position: fixed;
-    text-align: center;
-
-    left: 45%;
-}
-
 
 
 
@@ -297,17 +289,15 @@ h1 {
 
 
 
-/* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
 }
 
-/* Hide all steps by default: */
+
 .tab {
   display: none;
 }
 
-/* Make circles that indicate the steps of the form: */
 .step {
   height: 15px;
   width: 15px;
@@ -319,13 +309,13 @@ input.invalid {
   opacity: 1;
 }
 
-/* Mark the active step: */
+
 .step.active {
   background-color: black;
 
 }
 
-/* Mark the steps that are finished and valid: */
+/
 .step.finish {
   background-color: #0062c5;
 } 
@@ -401,9 +391,7 @@ input.invalid {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-left:0.5vw;
-  margin-right: 1vw;
-    color:#66afe1;
+  color:#66afe1;
 }
 
 #inputMme:hover{
@@ -478,6 +466,8 @@ input.invalid {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-left:0.5vw;
+  margin-right: 1vw;
     color:#66afe1;
 }
 
@@ -627,7 +617,7 @@ input.invalid {
 
 
 
-#inputNom, #inputPrenom, #inputEmail, #inputTelephone {
+#inputNom, #inputPrenom, #inputEmail, #inputTelephone, #inputAdresse, #inputCodePostal, #inputVille, #inputPays {
 
     width: 30vw;
     padding:10px;
@@ -636,7 +626,7 @@ input.invalid {
     border: 2px solid #66afe1;
 }
 
-#inputNom:hover, #inputPrenom:hover, #inputEmail:hover, #inputTelephone:hover {
+#inputNom:hover, #inputPrenom:hover, #inputEmail:hover, #inputTelephone:hover, #inputAdresse:hover, #inputCodePostal:hover, #inputVille:hover, #inputPays:hover{
 
     border: 3px solid #0062c5;
 
@@ -644,7 +634,7 @@ input.invalid {
 
 
 
-#inputNom:focus, #inputPrenom:focus, #inputEmail:focus, #inputTelephone:focus {
+#inputNom:focus, #inputPrenom:focus, #inputEmail:focus, #inputTelephone:focus, #inputAdresse:focus, #inputCodePostal:focus, #inputVille:focus, #inputPays:focus {
 
     border: 4px solid #0062c5;
     outline: none;
@@ -653,9 +643,75 @@ input.invalid {
 
 }
 
-#inputNom:focus::placeholder, #inputPrenom:focus::placeholder, #inputEmail:focus::placeholder, #inputTelephone:focus::placeholder {
+#inputNom:focus::placeholder, #inputPrenom:focus::placeholder, #inputEmail:focus::placeholder, #inputTelephone:focus::placeholder, #inputAdresse:focus::placeholder, #inputCodePostal:focus::placeholder, #inputVille:focus::placeholder, #inputPays:focus::placeholder {
     color:transparent;
 }
+
+
+
+
+
+select {
+
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+/* arrows */
+
+select#inputPays {
+  background-image:
+    linear-gradient(45deg, transparent 50%, blue 50%),
+    linear-gradient(135deg, blue 50%, transparent 50%),
+    linear-gradient(to right, #66afe1, #66afe1);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.2vw 7vh;
+  background-repeat: no-repeat;
+}
+
+select#inputPays:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, #0062c5, #0062c5);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.2vw 7vh;
+  background-repeat: no-repeat;
+  outline: 0;
+}
+
+
+
+
+
 
 
 #etapeSuivante, #etapePrecedente {
@@ -683,8 +739,28 @@ input.invalid {
   margin-left:13vw;
 }
 
+#finish {
+
+  display:none;
+}
+
+#finish h1 {
+
+    margin-top:35vh;
+    color:  #66afe1;
+    font-size: 34px;
+    font-weight: bold;
 
 
+}
+
+#finish h1:hover {
+    font-size: 36px;
+    text-shadow: 1px 1px gray;
+    color:  #0062c5;
+
+
+}
 
 
 
