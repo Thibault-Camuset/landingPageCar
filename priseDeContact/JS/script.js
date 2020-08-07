@@ -19,7 +19,7 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     document.getElementById("etapeSuivante").innerHTML = "Envoyer";
-    document.getElementById("etapeSuivante").type = "submit";
+   //  document.getElementById("etapeSuivante").type = "submit";
   } else {
 
     document.getElementById("etapeSuivante").innerHTML = "Etape Suivante";
@@ -39,10 +39,13 @@ function nextPrev(n) {
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
   // if you have reached the end of the form... :
+
+
+
+
   if (currentTab >= x.length) {
     document.getElementById("regForm").style.display = "none";
     document.getElementById("infoPerso").style.display = "none";
-
     document.getElementById("finish").style.display = "block";
     //...the form gets submitted:
     document.getElementById("regForm").submit();
