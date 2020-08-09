@@ -81,14 +81,8 @@ body {
 
 [class^="insidePannel"] {
   position: relative;
-  display:flex;
-  justify-content: space-between;
-  width: 80vw;
-  height: 80vh;
-  top: 10vh;
-  bottom: 10vh;
-  margin: auto;
-  max-height:80vh;
+  
+  
 
 }
 
@@ -334,7 +328,7 @@ body {
 
   }
 
-  /
+  
   .step.finish {
     background-color: #0062c5;
   } 

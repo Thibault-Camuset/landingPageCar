@@ -67,6 +67,8 @@ session_start();
 
 				<section class="panel3">
 
+
+
 					<<div class="insidePannel">
 						<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -131,15 +133,7 @@ session_start();
 
 
 
-               <!-- <h2>Panel c</h2>
-                <p>Fusce convallis arcu mauris, vitae semper ligula maximus vitae. Morbi a nibh id justo ullamcorper tincidunt. Aliquam et mollis mauris, eu varius metus. Praesent eget mi ac diam congue iaculis. Praesent accumsan euismod tempus. Aenean tempor libero et eros pellentesque molestie. Pellentesque malesuada ligula ut hendrerit laoreet. Ut turpis neque, tempor in ultrices sed, hendrerit ac leo. Nam placerat dolor sit amet ligula bibendum malesuada. Donec sagittis ultricies ex id mattis.</p>
-                <ul>
-                    <li>Aliquam iaculis enim ut mi bibendum tincidunt.</li>
-                    <li>Nulla quis elit in lorem vulputate laoreet.</li>
-                    <li>Praesent non lacus euismod, ultricies lectus ac, vehicula arcu.</li>
-                    <li>Integer lobortis ipsum vitae velit mollis, at commodo ligula suscipit.</li>
-                </ul>
-                <p>Sed ut leo et mi tristique feugiat. Nunc fermentum diam mauris, in ultricies neque tincidunt dictum. Quisque ac odio dignissim, ornare enim condimentum, faucibus erat. Sed tortor turpis, imperdiet dignissim lacus eget, dignissim vehicula lorem. Mauris semper mi lacus, sit amet rutrum lacus tincidunt sed. Curabitur vel nisl eu magna placerat pretium. Curabitur malesuada sagittis tortor, eget volutpat mi pellentesque quis.</p> -->
+              
 
             </section>
 
